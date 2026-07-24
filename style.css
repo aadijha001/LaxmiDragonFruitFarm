@@ -805,6 +805,26 @@ a {
 }
 
 @media (max-width: 768px) {
+  .main-header {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .main-header.scrolled {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+    max-width: calc(100% - 45px); /* Maximize width space for brand title */
+    line-height: 1.3;
+  }
+
+  .hero-section {
+    padding-top: 140px; /* Add top padding so content sits below the header */
+  }
+
   .nav-menu {
     display: none;
   }
