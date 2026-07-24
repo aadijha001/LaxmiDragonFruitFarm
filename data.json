@@ -14,7 +14,7 @@
   "story": {
     "title": "Our Story",
     "text": "Growing up in a farming family, I always knew I wanted to stay connected to the land. After researching dragon fruit cultivation, I decided to take the leap and start my own farm. With support along the way from KOICA, the farm grew. Today, we focus on clean, responsible agriculture—growing high-quality dragon fruit without heavy pesticides or harmful chemicals. Along the way, we've been able to create steady jobs for local workers, proudly supplying fresh produce to our local community and markets across Kathmandu. Naturally grown. Locally harvested.",
-    "image": "images/story.jpg"
+    "image": "images/story.JPG"
   },
   "details": {
     "title": "Making an Impact",
@@ -49,7 +49,7 @@
       { "src": "images/soilrubbing.JPG", "caption": "Preparing the organic soil beds manually" },
       { "src": "images/IMG_8748.jpg", "caption": "Lush dragon fruit vines growing along supportive posts" },
       { "src": "images/IMG_8750.jpg", "caption": "Livestock farming on our multi-purpose farm" },
-      { "src": "images/story.jpg", "caption": "Working together in our beautiful dragon fruit field" }
+      { "src": "images/story.JPG", "caption": "Working together in our beautiful dragon fruit field" }
     ]
   },
   "contact": {
