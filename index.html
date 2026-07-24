@@ -150,23 +150,8 @@
           <p id="gallery-subtitle" class="section-subtitle">Take a look at our farm activities, organic produce, and beautiful landscape.</p>
         </div>
 
-        <div class="carousel-container fade-up-scroll">
-          <div class="carousel-viewport">
-            <div class="carousel-track" id="gallery-carousel-track">
-              <div class="carousel-slide-placeholder">Loading Gallery...</div>
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Previous image">
-            <i data-lucide="chevron-left"></i>
-          </button>
-          <button class="carousel-btn next-btn" id="carousel-next" aria-label="Next image">
-            <i data-lucide="chevron-right"></i>
-          </button>
-
-          <!-- Indicators -->
-          <div class="carousel-indicators" id="carousel-indicators-container"></div>
+        <div class="gallery-grid fade-up-scroll" id="gallery-grid-container">
+          <div class="carousel-slide-placeholder">Loading Gallery...</div>
         </div>
       </div>
     </section>
@@ -227,6 +212,13 @@
       </div>
     </footer>
 
+  </div>
+
+  <!-- Lightbox Modal for Gallery -->
+  <div id="gallery-lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Lightbox Image">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
   </div>
 
   <!-- Application Logic -->
