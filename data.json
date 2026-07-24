@@ -1,0 +1,68 @@
+{
+  "businessName": "Laxmi Bahu-Uddeshya Matsya Tatha Pashupakshi Palan Farm",
+  "tagline": "Sustainably Grown, Freshly Harvested Dragon Fruits",
+  "hero": {
+    "title": "Welcome to Laxmi Bahu-Uddeshya Matsya Tatha Pashupakshi Palan Farm",
+    "subtitle": "Discover the exotic taste of organically grown premium dragon fruits straight from our fields to your table.",
+    "image": "images/hero.jpg"
+  },
+  "description": {
+    "title": "About Our Farm",
+    "text": "Nestled in MithilaBihari, Laxmi Bahu-Uddeshya Matsya Tatha Pashupakshi Palan Farm is dedicated to cultivating the finest varieties of organic dragon fruits. We practice sustainable, pesticide-free agriculture to bring you fruits that are not only delicious but also packed with nutrients, antioxidants, and pure natural goodness.",
+    "image": "images/about.jpg"
+  },
+  "story": {
+    "title": "Our Story",
+    "text": "Growing up in a farming family, I always knew I wanted to stay connected to the land. After researching dragon fruit cultivation, I decided to take the leap and start my own farm. With support along the way from KOICA, the farm grew. Today, we focus on clean, responsible agriculture—growing high-quality dragon fruit without heavy pesticides or harmful chemicals. Along the way, we've been able to create steady jobs for local workers, proudly supplying fresh produce to our local community and markets across Kathmandu. Naturally grown. Locally harvested.",
+    "image": "images/story.jpg"
+  },
+  "details": {
+    "title": "Making an Impact",
+    "subtitle": "Photos of our activities and the change we're creating.",
+    "image": "images/contact.jpeg",
+    "items": [
+      {
+        "title": "Empowering Communities",
+        "text": "Creating sustainable local employment and training programs for farming families in the region."
+      },
+      {
+        "title": "Creating Opportunities",
+        "text": "Enabling new career paths in sustainable agriculture and modern farming methods for local youth."
+      },
+      {
+        "title": "Sustainable Future",
+        "text": "Cultivating organic, chemical-free food using eco-friendly agricultural practices and resource management."
+      },
+      {
+        "title": "Positive Change",
+        "text": "Fostering healthy lives, green growth, and environmental harmony within our local communities."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Farm Gallery",
+    "subtitle": "Take a look at our farm activities, organic produce, and beautiful landscape.",
+    "images": [
+      { "src": "images/flower.JPG", "caption": "A beautiful white dragon fruit flower in full bloom" },
+      { "src": "images/planting.JPG", "caption": "Cultivating and planting new dragon fruit saplings" },
+      { "src": "images/binding.JPG", "caption": "Binding and securing dragon fruit vines for support" },
+      { "src": "images/soilrubbing.JPG", "caption": "Preparing the organic soil beds manually" },
+      { "src": "images/IMG_8748.jpg", "caption": "Lush dragon fruit vines growing along supportive posts" },
+      { "src": "images/IMG_8750.jpg", "caption": "Livestock farming on our multi-purpose farm" },
+      { "src": "images/story.jpg", "caption": "Working together in our beautiful dragon fruit field" }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Visit our farm or contact us to order fresh dragon fruits.",
+    "phone": "+977 9804814673",
+    "email": "lalitnjha2030@gmail.com",
+    "address": "MithilaBihari, Ward 10, Dhanusa, Nepal",
+    "hours": "Monday - Saturday: 7:00 AM - 6:00 PM",
+    "socialLinks": {
+      "facebook": "https://facebook.com/LaxmiDragonFruitFarm",
+      "instagram": "https://instagram.com/LaxmiDragonFruitFarm",
+      "whatsapp": "https://wa.me/9779804814673"
+    }
+  }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laxmi Dragon Fruit Farm - Sustainably Grown, Freshly Harvested Premium Organic Dragon Fruits.">
+  <title>Laxmi Dragon Fruit Farm | Premium Organic Produce</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- CORS / Fetch Error Notice (Hidden by default, shown via JS if fetch fails) -->
+  <div id="error-notice" class="error-notice hidden">
+    <div class="error-card">
+      <i data-lucide="alert-triangle" class="error-icon"></i>
+      <h2>Local Server Required</h2>
+      <p>Because this app loads its data dynamically from <code>data.json</code>, modern web browsers block this request when opening the file directly (via <code>file://</code>).</p>
+      <div class="instructions">
+        <p><strong>To view the website, please run a local web server:</strong></p>
+        <ul>
+          <li>Open your terminal in this project folder and run:</li>
+          <pre><code>npx serve</code></pre>
+          <li>Or using Python:</li>
+          <pre><code>python3 -m http.server 8000</code></pre>
+          <li>Then open the link shown in your terminal (usually <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> or <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main App Layout -->
+  <div id="app" class="fade-in">
+    
+    <!-- Header/Nav -->
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <i data-lucide="leaf" class="logo-icon"></i>
+          <span id="nav-brand-name">Farm Profile</span>
+        </a>
+        <nav class="nav-menu">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#story" class="nav-link">Our Story</a>
+          <a href="#details" class="nav-link">Why Us</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link nav-btn">Contact</a>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+      <nav class="mobile-nav-menu">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#story" class="mobile-nav-link">Our Story</a>
+        <a href="#details" class="mobile-nav-link">Why Us</a>
+        <a href="#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg" id="hero-bg-img"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge" id="hero-badge">Organic & Fresh</span>
+          <h1 id="hero-title">Welcome to Our Farm</h1>
+          <p id="hero-subtitle">Premium organic farming with passion.</p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">Explore Our Farm</a>
+            <a href="#contact" class="btn btn-secondary">Get Fresh Fruits</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description (About) Section -->
+    <section id="about" class="section about-section">
+      <div class="container grid grid-2">
+        <div class="section-content fade-up-scroll">
+          <span class="section-tag">About Us</span>
+          <h2 id="about-title">About the Business</h2>
+          <p id="about-text" class="lead-text">Loading details...</p>
+        </div>
+        <div class="section-image fade-up-scroll">
+          <div class="image-wrapper">
+            <img id="about-img" src="" alt="About Our Farm" class="interactive-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section story-section">
+      <div class="container grid grid-2 reverse-layout">
+        <div class="section-image fade-up-scroll">
+          <div class="image-wrapper">
+            <img id="story-img" src="" alt="Our Journey" class="interactive-img">
+          </div>
+        </div>
+        <div class="section-content fade-up-scroll">
+          <span class="section-tag">Our Legacy</span>
+          <h2 id="story-title">Our Story</h2>
+          <p id="story-text" class="lead-text">Loading our journey...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="section details-section">
+      <div class="container">
+        <div class="section-header text-center fade-up-scroll">
+          <span class="section-tag">Quality Assured</span>
+          <h2 id="details-title">Why Choose Us</h2>
+          <p id="details-subtitle" class="section-subtitle">We grow with standards that set us apart.</p>
+        </div>
+        <div class="grid grid-2-1 align-items-center">
+          <div class="details-grid" id="details-items-container">
+            <!-- Dynamic details card list will go here -->
+          </div>
+          <div class="section-image details-side-image fade-up-scroll">
+            <div class="image-wrapper">
+              <img id="details-img" src="" alt="Our Offerings" class="interactive-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-header text-center fade-up-scroll">
+          <span class="section-tag">Visual Tour</span>
+          <h2 id="gallery-title">Farm Gallery</h2>
+          <p id="gallery-subtitle" class="section-subtitle">Take a look at our farm activities, organic produce, and beautiful landscape.</p>
+        </div>
+
+        <div class="carousel-container fade-up-scroll">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="gallery-carousel-track">
+              <div class="carousel-slide-placeholder">Loading Gallery...</div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Previous image">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="carousel-btn next-btn" id="carousel-next" aria-label="Next image">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+          <!-- Indicators -->
+          <div class="carousel-indicators" id="carousel-indicators-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center fade-up-scroll">
+          <span class="section-tag">Get in Touch</span>
+          <h2 id="contact-title">Contact Section</h2>
+          <p id="contact-subtitle" class="section-subtitle">Have questions or want to make an order? Reach out directly.</p>
+        </div>
+        
+        <div class="grid grid-2 contact-grid fade-up-scroll">
+          <div class="info-card">
+            <i data-lucide="phone" class="info-icon"></i>
+            <div class="info-details">
+              <h3>Call Us</h3>
+              <p id="contact-phone">Loading...</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i data-lucide="mail" class="info-icon"></i>
+            <div class="info-details">
+              <h3>Email Us</h3>
+              <p id="contact-email">Loading...</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i data-lucide="map-pin" class="info-icon"></i>
+            <div class="info-details">
+              <h3>Visit Us</h3>
+              <p><a href="https://maps.app.goo.gl/Rfgh2unbyghmvLVz9" target="_blank" rel="noopener noreferrer" class="contact-map-link"><span id="contact-address">Loading...</span></a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i data-lucide="clock" class="info-icon"></i>
+            <div class="info-details">
+              <h3>Business Hours</h3>
+              <p id="contact-hours">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <i data-lucide="leaf" class="logo-icon"></i>
+            <span id="footer-brand-name">Farm Profile</span>
+          </a>
+          <p>Exotic flavor, organic goodness, grown with care.</p>
+        </div>
+        <p class="copyright">&copy; <span id="copyright-year">2026</span> <span id="footer-copyright-name">Farm Profile</span>. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
