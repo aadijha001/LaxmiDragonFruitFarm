@@ -1025,11 +1025,12 @@ a {
   }
   
   .slide-overlay {
-    padding: 25px 20px 15px;
+    padding: 20px 60px 15px; /* Prevent overlapping with side buttons on mobile */
   }
   
   .slide-caption {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    text-align: center; /* Center caption for visual balance */
   }
   
   .carousel-btn {

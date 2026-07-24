@@ -455,7 +455,14 @@ function initCarousel(track, dotsContainer) {
   }
 
   // Click on the slide to advance to the next image
-  track.addEventListener('click', () => {
+  let touchMoved = false; // Flag to prevent synthetic clicks after swiping
+  
+  track.addEventListener('click', (e) => {
+    // If the click was triggered immediately after ending a swipe, ignore it
+    if (touchMoved) {
+      touchMoved = false;
+      return;
+    }
     moveToSlide(currentIndex + 1);
     resetAutoplay();
   });
@@ -467,11 +474,17 @@ function initCarousel(track, dotsContainer) {
   track.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
     isSwiping = true;
+    touchMoved = false; // Reset on start
     stopAutoplay();
   }, { passive: true });
 
   track.addEventListener('touchmove', (e) => {
     if (!isSwiping) return;
+    const currentX = e.touches[0].clientX;
+    // If the movement is more than 10px, flag it as a swipe/drag
+    if (Math.abs(startX - currentX) > 10) {
+      touchMoved = true;
+    }
   }, { passive: true });
 
   track.addEventListener('touchend', (e) => {
@@ -484,10 +497,18 @@ function initCarousel(track, dotsContainer) {
     if (diffX > threshold) {
       // Swipe Left -> Next Slide
       moveToSlide(currentIndex + 1);
+      touchMoved = true; // Ensure synthetic click is blocked
     } else if (diffX < -threshold) {
       // Swipe Right -> Prev Slide
       moveToSlide(currentIndex - 1);
+      touchMoved = true; // Ensure synthetic click is blocked
     }
+    
+    // Reset the flag after a brief delay to clear the touch transition cycle
+    setTimeout(() => {
+      touchMoved = false;
+    }, 150);
+    
     startAutoplay();
   }, { passive: true });
 }
